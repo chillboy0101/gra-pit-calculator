@@ -1,0 +1,325 @@
+#gra-pit-calculator{
+  max-width:780px;
+  margin:0 auto;
+}
+
+#gra-pit-calculator{
+  --gra-navy:#001b48;
+  --gra-gold:#f4b000;
+  --gra-light:#f4f6fb;
+  --gra-border:#d6d9e4;
+  --gra-text:#111827;
+  --gra-muted:#6b7280;
+}
+
+ #gra-pit-calculator.gra-pit-standalone{
+   background:#ffffff;
+   box-shadow:0 26px 70px rgba(0,0,0,.18) !important;
+   -webkit-box-shadow:0 26px 70px rgba(0,0,0,.18) !important;
+   -moz-box-shadow:0 26px 70px rgba(0,0,0,.18) !important;
+   padding:0;
+ }
+
+ #gra-pit-calculator.gra-pit-standalone .paye-vat-shell{
+   background:transparent;
+ }
+
+#gra-pit-calculator{
+  overflow-anchor:none;
+  border:0 !important;
+  outline:0 !important;
+  box-shadow:none !important;
+  background:transparent;
+}
+
+ #gra-pit-calculator,
+ #gra-pit-calculator .paye-vat-shell,
+ #gra-pit-calculator .paye-vat-card{
+   border-color:transparent !important;
+   outline:0 !important;
+ }
+
+#gra-pit-calculator:focus,
+#gra-pit-calculator:focus-visible{
+  outline:0 !important;
+}
+
+#gra-pit-calculator .paye-vat-shell{
+  border:0 !important;
+  outline:0 !important;
+  box-shadow:none !important;
+  background:transparent;
+}
+
+#gra-pit-calculator .paye-vat-shell:focus,
+#gra-pit-calculator .paye-vat-shell:focus-visible{
+  outline:0 !important;
+}
+
+#gra-pit-calculator *{box-sizing:border-box;}
+
+#gra-pit-calculator .paye-vat-shell{
+  max-width:none;
+  margin:0;
+  padding:0;
+  font-family:"Open Sans",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+  font-size:17px;
+  line-height:1.6;
+}
+
+#gra-pit-calculator .paye-vat-header{
+  background:#0b2a57;
+  border-radius:0;
+  padding:22px 16px;
+  text-align:center;
+  width:100%;
+  margin:0;
+}
+
+#gra-pit-calculator .paye-vat-header h5{
+  margin:0;
+  color:#fff;
+  font-weight:800;
+  letter-spacing:.04em;
+  text-transform:uppercase;
+  font-size:22px;
+}
+
+#gra-pit-calculator .paye-vat-body{padding:22px 18px 30px;}
+
+#gra-pit-calculator .paye-vat-card{
+  background:#fff;
+  border:0 !important;
+  border-radius:2px;
+  box-shadow:-1px 12px 32px -14px rgba(0,0,0,.38) !important;
+  padding:26px 26px 22px;
+  min-height:0;
+  font-size:15px;
+  color:#111827;
+}
+
+#gra-pit-calculator .paye-vat-section-title{
+  margin:0;
+  text-align:center;
+  color:#1f2937;
+  font-weight:700;
+  font-size:18px;
+  padding:8px 0 12px;
+  border-bottom:1px solid #e6e6e6;
+  margin-bottom:14px;
+}
+
+#gra-pit-calculator .gra-field{margin-bottom:14px;}
+
+#gra-pit-calculator .gra-label{
+  display:block;
+  font-size:19px;
+  line-height:1.5;
+  font-weight:700;
+  color:#1f2937;
+}
+
+#gra-pit-calculator .gra-hint{
+  display:block;
+  font-size:18px;
+  line-height:1.6;
+  color:#6b7280;
+  margin-top:4px !important;
+}
+
+#gra-pit-calculator .gra-error{
+  display:none;
+  margin-top:8px;
+  font-size:14px;
+  color:#b91c1c;
+}
+
+#gra-pit-calculator .gra-error.is-visible{display:block;}
+
+#gra-pit-calculator .paye-field-divider{
+  margin:12px 0 18px;
+  border:0;
+  border-top:0;
+}
+
+#gra-pit-calculator .gra-input-wrap{
+  display:flex;
+  align-items:stretch;
+  border:0;
+  border-radius:0;
+  overflow:visible;
+  background:#f4f4f4;
+  border-bottom:3px solid #d7d7d7;
+  box-shadow:none !important;
+}
+
+#gra-pit-calculator .gra-input-wrap:hover{
+  border-bottom-color:#313787;
+  border-bottom-width:3px;
+}
+
+#gra-pit-calculator .gra-input-wrap:focus-within{
+  border-bottom-color:#313787;
+  border-bottom-width:3px;
+  background:#f7f7f7;
+}
+
+#gra-pit-calculator .gra-input-prefix{
+  display:inline-flex;
+  align-items:center;
+  background:transparent;
+  border-right:0;
+  color:#2d3748;
+  font-size:18px;
+  padding-left:20px;
+  white-space:nowrap;
+  flex:0 0 auto;
+  min-width:3.5ch;
+}
+
+#gra-pit-calculator .gra-input{
+  width:100%;
+  border:0;
+  outline:none;
+  background:transparent;
+  font-size:20px;
+  padding:14px 16px 14px 10px;
+}
+
+#gra-pit-calculator .paye-type-toggle{
+  display:flex;
+  gap:16px;
+  flex-wrap:wrap;
+}
+
+#gra-pit-calculator .paye-type-toggle label{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  cursor:pointer;
+}
+
+#gra-pit-calculator .paye-type-toggle input[type="radio"]{
+  appearance:none;
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  width:24px;
+  height:24px;
+  border:2.5px solid #3740b0;
+  border-radius:50%;
+  background:#ffffff;
+  cursor:pointer;
+  position:relative;
+  flex-shrink:0;
+  outline:none;
+}
+
+#gra-pit-calculator .paye-type-toggle input[type="radio"]:checked::after{
+  content:"";
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  width:12px;
+  height:12px;
+  border-radius:50%;
+  background:#3740b0;
+}
+
+#gra-pit-calculator .paye-type-toggle .paye-type-option{
+  display:inline-block;
+  line-height:1.6;
+  font-size:17px;
+  color:#374151;
+  font-weight:500;
+}
+
+#gra-pit-calculator .gra-actions{display:flex;gap:10px;margin-top:8px;}
+
+#gra-pit-calculator .gra-btn-primary,
+#gra-pit-calculator .gra-btn-secondary{
+  appearance:none;
+  border-radius:3px;
+  border:0;
+  padding:10px 12px;
+  font-weight:600;
+  cursor:pointer;
+  font-size:18px;
+  height:52px;
+}
+
+#gra-pit-calculator .gra-btn-primary{
+  background:#1aa3b1;
+  color:#fff;
+}
+
+#gra-pit-calculator .gra-btn-secondary{
+  border-radius:3px;
+  border:1px solid #cbd5e1;
+  background:#f3f4f6;
+  color:#111827;
+  height:auto;
+  min-height:46px;
+  font-size:16px;
+}
+
+#gra-pit-calculator .gra-results{margin-top:12px;}
+
+#gra-pit-calculator .is-hidden{display:none !important;}
+
+#gra-pit-calculator .paye-result-line{
+  display:flex;
+  align-items:baseline;
+  justify-content:space-between;
+  gap:10px;
+  padding:8px 0;
+  border-bottom:0;
+}
+
+#gra-pit-calculator .paye-result-label{font-size:17px;font-weight:800;color:#111827;letter-spacing:.02em;}
+#gra-pit-calculator .paye-result-value{font-size:18px;font-weight:800;color:#001b48;}
+
+#gra-pit-calculator .table-wrapper{width:100%;max-width:100%;overflow:visible;margin:10px 0 0;}
+
+#gra-pit-calculator .fl-table{
+  width:100%;
+  max-width:100%;
+  table-layout:fixed;
+  border-collapse:separate;
+  border-spacing:0;
+}
+
+#gra-pit-calculator .fl-table th,
+#gra-pit-calculator .fl-table td{
+  padding:16px 8px;
+  font-size:15px;
+  word-break:break-word;
+  white-space:normal;
+  overflow-wrap:break-word;
+  hyphens:auto;
+  color:#1f2937;
+  border:1px solid #cbd5e1;
+}
+
+#gra-pit-calculator .fl-table td{font-weight:700;color:#111827;}
+
+#gra-pit-calculator .fl-table thead th{
+  font-size:14px;
+  line-height:1.3;
+  padding:16px 8px;
+  font-weight:800;
+  color:#ffffff;
+}
+
+#gra-pit-calculator .fl-table thead th:nth-child(odd){background:#30336B !important;}
+#gra-pit-calculator .fl-table thead th:nth-child(even){background:#487EB0 !important;}
+
+@media (max-width: 767px){
+  #gra-pit-calculator .paye-vat-card{padding:18px 14px 18px;}
+  #gra-pit-calculator .paye-vat-body{padding:16px 12px 20px;}
+  #gra-pit-calculator .paye-vat-header h5{font-size:18px;}
+  #gra-pit-calculator .gra-input{font-size:18px;padding:12px 14px 12px 8px;}
+  #gra-pit-calculator .gra-input-prefix{font-size:14px;padding-left:14px;}
+  #gra-pit-calculator .gra-btn-secondary{font-size:15px;}
+  #gra-pit-calculator .gra-btn-primary{height:48px;font-size:16px;}
+}
