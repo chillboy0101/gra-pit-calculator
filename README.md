@@ -12,6 +12,10 @@ The shortcode does not change between versions. After an update, existing pages 
 
 Repository: https://github.com/chillboy0101/gra-pit-calculator
 
+Author: GRA IT Department (https://gra.gov.gh)
+
+Maintainer: Carl Quist (https://github.com/chillboy0101)
+
 Official bands: https://gra.gov.gh/domestic-tax/tax-types/paye/
 
 The PIT page is https://gra.gov.gh/domestic-tax/personal-income-tax/. GRA publishes the resident individual monthly and annual tables on the PAYE page. The slices in `assets/app.js` match that Year of Assessment 2026 table.
