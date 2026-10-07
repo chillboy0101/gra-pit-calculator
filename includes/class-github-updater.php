@@ -23,6 +23,42 @@ class GRA_PIT_GitHub_Updater {
 
         add_filter('update_plugins_github.com', array($this, 'filter_update'), 10, 4);
         add_filter('plugins_api', array($this, 'filter_plugin_info'), 10, 3);
+        add_action('admin_init', array($this, 'ensure_listed'));
+    }
+
+    /**
+     * WordPress can wait 12 hours before it checks a newly installed plugin.
+     * Until that check is stored, Plugins shows "Visit plugin site" and hides
+     * auto-updates. Ask once, on the first admin page, so the row shows
+     * "View details" without a manual refresh.
+     */
+    public function ensure_listed() {
+        if (wp_doing_ajax() || wp_doing_cron() || !current_user_can('update_plugins')) {
+            return;
+        }
+
+        $transient = get_site_transient('update_plugins');
+        if (!is_object($transient)) {
+            return;
+        }
+
+        $file = $this->plugin_basename;
+        if (isset($transient->response[$file]) || isset($transient->no_update[$file])) {
+            return;
+        }
+
+        $lock = self::CACHE_KEY . '_list_lock';
+        if (get_site_transient($lock)) {
+            return;
+        }
+        set_site_transient($lock, 1, 2 * MINUTE_IN_SECONDS);
+
+        if (isset($transient->checked[$file])) {
+            unset($transient->checked[$file]);
+            set_site_transient('update_plugins', $transient);
+        }
+
+        wp_update_plugins();
     }
 
     public function filter_update($update, $plugin_data, $plugin_file, $locales) {
