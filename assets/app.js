@@ -191,7 +191,7 @@
     mount.innerHTML = `
       <div class="gra-main-panel paye-vat-shell">
         <div class="paye-vat-header">
-          <h5>Personal Income Tax (PIT) Calculator</h5>
+          <h5>Personal Income Tax Calculator</h5>
         </div>
         <div class="paye-vat-body">
           <div class="paye-vat-grid" style="display: block;">
