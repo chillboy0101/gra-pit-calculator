@@ -197,7 +197,7 @@
           <div class="paye-vat-grid" style="display: block;">
             <div class="paye-vat-col" style="margin: 0 auto 40px;">
               <div class="paye-vat-card">
-                <div class="paye-vat-section-title">Compute net income</div>
+                <div class="paye-vat-section-title">Income, allowances, and relief</div>
                 <form id="income-tax-form" novalidate>
                   <div class="gra-field">
                     <label class="gra-label">Basis</label>
@@ -221,7 +221,7 @@
                       <span class="gra-input-prefix">GHS</span>
                       <input id="basicIncome" class="gra-input" inputmode="decimal" autocomplete="off" placeholder="e.g. 5000.00" required />
                     </div>
-                    <p id="basicIncomeError" class="gra-error"><span id="basicIncomeErrorText">Please enter a valid amount greater than zero.</span></p>
+                    <p id="basicIncomeError" class="gra-error" role="alert"><span id="basicIncomeErrorText">Enter the monthly basic income.</span></p>
                   </div>
 
                   <div class="paye-field-divider"></div>
@@ -494,10 +494,15 @@
   function setError(msg) {
     if (basicIncomeErrorTextEl) basicIncomeErrorTextEl.textContent = msg;
     if (basicIncomeErrorEl) basicIncomeErrorEl.classList.add('is-visible');
+    if (basicIncomeEl) {
+      basicIncomeEl.setAttribute('aria-invalid', 'true');
+      basicIncomeEl.focus();
+    }
   }
 
   function clearError() {
     if (basicIncomeErrorEl) basicIncomeErrorEl.classList.remove('is-visible');
+    if (basicIncomeEl) basicIncomeEl.removeAttribute('aria-invalid');
   }
 
   function resetBreakdownUi() {
@@ -771,9 +776,23 @@
   function handleCalculate(event) {
     event.preventDefault();
 
+    const rawBasic = String(basicIncomeEl.value == null ? '' : basicIncomeEl.value).trim();
+    const basicIsAnnual = resolveBasis() === 'annual';
     const basicParsed = parseNumber(basicIncomeEl.value);
-    if (!basicParsed.ok || basicParsed.value <= 0) {
-      setError('Please enter a valid amount greater than zero.');
+    if (!rawBasic) {
+      setError(basicIsAnnual ? 'Enter the annual basic income.' : 'Enter the monthly basic income.');
+      if (resultsEl) resultsEl.classList.add('is-hidden');
+      resetBreakdownUi();
+      return;
+    }
+    if (!basicParsed.ok) {
+      setError('Enter a number, such as 5000.00.');
+      if (resultsEl) resultsEl.classList.add('is-hidden');
+      resetBreakdownUi();
+      return;
+    }
+    if (basicParsed.value <= 0) {
+      setError('Enter an amount greater than zero.');
       if (resultsEl) resultsEl.classList.add('is-hidden');
       resetBreakdownUi();
       return;

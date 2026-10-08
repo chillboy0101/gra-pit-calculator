@@ -130,8 +130,12 @@
 #gra-pit-calculator .gra-error{
   display:none;
   margin-top:8px;
-  font-size:14px;
+  font-size:16px;
   color:#b91c1c;
+}
+
+#gra-pit-calculator .gra-input-wrap:has(.gra-input[aria-invalid="true"]){
+  box-shadow:inset 0 0 0 1px #b91c1c;
 }
 
 #gra-pit-calculator .gra-error.is-visible{display:block;}
