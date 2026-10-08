@@ -48,7 +48,7 @@
   function formatCurrencyFromCents(cents) {
     if (!isFinite(cents)) return '';
     return (
-      'GHS ' +
+      'GH¢ ' +
       fromCents(cents)
         .toFixed(2)
         .replace(/\B(?=(\d{3})+(?!\d))/g, ',')
@@ -57,7 +57,7 @@
 
   function formatCurrency(amount) {
     if (!isFinite(amount)) return '';
-    return 'GHS ' + amount.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    return 'GH¢ ' + amount.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
   }
 
   function parseNumber(raw) {
@@ -218,7 +218,7 @@
                   <div class="gra-field">
                     <label id="basicIncomeLabel" class="gra-label" for="basicIncome">Monthly basic income <span aria-hidden="true" style="color: #b91c1c;">*</span></label>
                     <div class="gra-input-wrap" style="margin-top: 6px;">
-                      <span class="gra-input-prefix">GHS</span>
+                      <span class="gra-input-prefix">GH¢</span>
                       <input id="basicIncome" class="gra-input" inputmode="decimal" autocomplete="off" placeholder="e.g. 5000.00" required />
                     </div>
                     <p id="basicIncomeError" class="gra-error" role="alert"><span id="basicIncomeErrorText">Enter the monthly basic income.</span></p>
@@ -229,7 +229,7 @@
                   <div class="gra-field">
                     <label id="allowancesLabel" class="gra-label" for="allowances">Monthly allowances (Allowances are included in chargeable income)</label>
                     <div class="gra-input-wrap" style="margin-top: 6px;">
-                      <span class="gra-input-prefix">GHS</span>
+                      <span class="gra-input-prefix">GH¢</span>
                       <input id="allowances" class="gra-input" inputmode="decimal" autocomplete="off" placeholder="e.g. 0.00" />
                     </div>
                   </div>
@@ -239,7 +239,7 @@
                   <div class="gra-field">
                     <label id="taxReliefLabel" class="gra-label" for="taxRelief">Tax relief</label>
                     <div class="gra-input-wrap" style="margin-top: 6px;">
-                      <span class="gra-input-prefix">GHS</span>
+                      <span class="gra-input-prefix">GH¢</span>
                       <input id="taxRelief" class="gra-input" inputmode="decimal" autocomplete="off" placeholder="e.g. 0.00" />
                     </div>
                   </div>
@@ -270,9 +270,9 @@
                           <tr>
                             <th><strong id="breakdownCaption">Band (monthly)</strong></th>
                             <th><strong>Rate (%)</strong></th>
-                            <th><strong>Tax on band (GHS)</strong></th>
-                            <th><strong>Taxable amount (GHS)</strong></th>
-                            <th><strong>Cumulative tax (GHS)</strong></th>
+                            <th><strong>Tax on band (GH¢)</strong></th>
+                            <th><strong>Taxable amount (GH¢)</strong></th>
+                            <th><strong>Cumulative tax (GH¢)</strong></th>
                           </tr>
                         </thead>
                         <tbody id="breakdownBody"></tbody>
@@ -291,11 +291,11 @@
                     <thead>
                       <tr>
                         <th><strong id="bandsCaption">Year of Assessment 2026 (Monthly)</strong></th>
-                        <th><strong>Chargeable Income GHS</strong></th>
+                        <th><strong>Chargeable Income GH¢</strong></th>
                         <th><strong>Rate %</strong></th>
-                        <th><strong>Tax Payable GHS</strong></th>
-                        <th><strong>Cumulative Income GHS</strong></th>
-                        <th><strong>Cumulative Tax GHS</strong></th>
+                        <th><strong>Tax Payable GH¢</strong></th>
+                        <th><strong>Cumulative Income GH¢</strong></th>
+                        <th><strong>Cumulative Tax GH¢</strong></th>
                       </tr>
                     </thead>
                     <tbody id="bandsTableBody"></tbody>
