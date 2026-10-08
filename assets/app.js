@@ -553,23 +553,23 @@
 
       const colBand = document.createElement('td');
       if (r.isExcess) {
-        colBand.textContent = 'Exceeding ' + formatter.format(exceedingThreshold);
+        colBand.innerHTML = '<strong>Exceeding ' + formatter.format(exceedingThreshold) + '</strong>';
       } else {
         const labelPrefix = r.index === 0 ? 'First ' : 'Next ';
-        colBand.textContent = labelPrefix + formatter.format(bands[r.index].amount);
+        colBand.innerHTML = '<strong>' + labelPrefix + formatter.format(bands[r.index].amount) + '</strong>';
       }
 
       const colRate = document.createElement('td');
-      colRate.textContent = String(r.rate);
+      colRate.innerHTML = '<strong>' + String(r.rate) + '</strong>';
 
       const colTax = document.createElement('td');
-      colTax.textContent = formatter.format(fromCents(r.taxOnBandCents));
+      colTax.innerHTML = '<strong>' + formatter.format(fromCents(r.taxOnBandCents)) + '</strong>';
 
       const colTaxable = document.createElement('td');
-      colTaxable.textContent = formatter.format(fromCents(r.taxableAmountCents));
+      colTaxable.innerHTML = '<strong>' + formatter.format(fromCents(r.taxableAmountCents)) + '</strong>';
 
       const colCumTax = document.createElement('td');
-      colCumTax.textContent = formatter.format(fromCents(r.cumulativeTaxCents));
+      colCumTax.innerHTML = '<strong>' + formatter.format(fromCents(r.cumulativeTaxCents)) + '</strong>';
 
       rowEl.appendChild(colBand);
       rowEl.appendChild(colRate);
