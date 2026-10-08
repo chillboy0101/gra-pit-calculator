@@ -219,7 +219,7 @@
                     <label id="basicIncomeLabel" class="gra-label" for="basicIncome">Monthly basic income <span aria-hidden="true" style="color: #b91c1c;">*</span></label>
                     <div class="gra-input-wrap" style="margin-top: 6px;">
                       <span class="gra-input-prefix">GH¢</span>
-                      <input id="basicIncome" class="gra-input" inputmode="decimal" autocomplete="off" placeholder="e.g. 5000.00" required />
+                      <input id="basicIncome" class="gra-input" inputmode="decimal" autocomplete="off" placeholder="e.g. 5,000.00" required />
                     </div>
                     <p id="basicIncomeError" class="gra-error" role="alert"><span id="basicIncomeErrorText">Enter the monthly basic income.</span></p>
                   </div>
@@ -230,7 +230,7 @@
                     <label id="allowancesLabel" class="gra-label" for="allowances">Monthly allowances (Allowances are included in chargeable income)</label>
                     <div class="gra-input-wrap" style="margin-top: 6px;">
                       <span class="gra-input-prefix">GH¢</span>
-                      <input id="allowances" class="gra-input" inputmode="decimal" autocomplete="off" placeholder="e.g. 0.00" />
+                      <input id="allowances" class="gra-input" inputmode="decimal" autocomplete="off" placeholder="e.g. 500.00" />
                     </div>
                   </div>
 
@@ -240,7 +240,7 @@
                     <label id="taxReliefLabel" class="gra-label" for="taxRelief">Tax relief</label>
                     <div class="gra-input-wrap" style="margin-top: 6px;">
                       <span class="gra-input-prefix">GH¢</span>
-                      <input id="taxRelief" class="gra-input" inputmode="decimal" autocomplete="off" placeholder="e.g. 0.00" />
+                      <input id="taxRelief" class="gra-input" inputmode="decimal" autocomplete="off" placeholder="e.g. 100.00" />
                     </div>
                   </div>
 
@@ -612,15 +612,15 @@
     }
 
     if (basicIncomeEl) {
-      basicIncomeEl.setAttribute('placeholder', isAnnual ? 'e.g. 60000.00' : 'e.g. 5000.00');
+      basicIncomeEl.setAttribute('placeholder', isAnnual ? 'e.g. 60,000.00' : 'e.g. 5,000.00');
     }
 
     if (allowancesEl) {
-      allowancesEl.setAttribute('placeholder', isAnnual ? 'e.g. 0.00' : 'e.g. 0.00');
+      allowancesEl.setAttribute('placeholder', isAnnual ? 'e.g. 6,000.00' : 'e.g. 500.00');
     }
 
     if (taxReliefEl) {
-      taxReliefEl.setAttribute('placeholder', isAnnual ? 'e.g. 0.00' : 'e.g. 0.00');
+      taxReliefEl.setAttribute('placeholder', isAnnual ? 'e.g. 1,200.00' : 'e.g. 100.00');
     }
 
     if (resultNetLabelEl) {
