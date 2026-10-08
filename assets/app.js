@@ -195,7 +195,7 @@
         </div>
         <div class="paye-vat-body">
           <div class="paye-vat-grid" style="display: block;">
-            <div class="paye-vat-col" style="max-width: 95%; margin: 0 auto 40px;">
+            <div class="paye-vat-col" style="margin: 0 auto 40px;">
               <div class="paye-vat-card">
                 <div class="paye-vat-section-title">Compute net income</div>
                 <form id="income-tax-form" novalidate>
@@ -283,7 +283,7 @@
               </div>
             </div>
 
-            <div class="paye-vat-col" style="max-width: 95%; margin: 0 auto 20px;">
+            <div class="paye-vat-col" style="margin: 0 auto 20px;">
               <div class="paye-vat-card">
                 <div class="paye-vat-section-title">PAYE Bands</div>
                 <div class="table-wrapper">
