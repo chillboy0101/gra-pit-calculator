@@ -345,37 +345,6 @@
       // ignore
     }
 
-    try {
-      const existingDisclaimer = document.getElementById('pit-disclaimer-section');
-      if (!existingDisclaimer) {
-        const disclaimer = document.createElement('div');
-        disclaimer.id = 'pit-disclaimer-section';
-        disclaimer.style.marginTop = '130px';
-        disclaimer.className = 'gdlr-core-pbf-element';
-        disclaimer.innerHTML =
-          '<div class="gdlr-core-title-item gdlr-core-item-pdb clearfix gdlr-core-left-align gdlr-core-title-item-caption-bottom gdlr_core-item-pdlr" style="padding-left: 20px;">' +
-          '<div class="gdlr-core-title-item-title-wrap">' +
-          '<h3 class="gdlr-core-title-item-title gdlr-core-skin-title" style="font-size: 20px; font-weight: 600; text-transform: none; color: #313787;">' +
-          'Disclaimer on Use Of Tax Calculators' +
-          '<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider"></span>' +
-          '</h3>' +
-          '</div>' +
-          '<span class="gdlr-core-title-item-caption gdlr-core-info-font gdlr-core-skin-caption">' +
-          'The use of the Tax Calculators only serves as a guideline. The actual tax payable by you or deduction available to you (if any) will depend on your personal circumstances. It is advised that for filing of returns and for making formal financial decisions, the exact calculation be made as per the provisions contained in the relevant Acts, and Laws.' +
-          '</span>' +
-          '</div>';
-
-        const contentColumn = document.querySelector('.gdlr-core-pbf-sidebar-content-inner') ||
-          document.querySelector('.gdlr-core-pbf-sidebar-content') ||
-          mount.parentNode;
-
-        if (contentColumn) {
-          contentColumn.appendChild(disclaimer);
-        }
-      }
-    } catch (e) {
-      // ignore
-    }
   }
 
   function netIncomeCents(basic, allowances, relief, isAnnual) {
