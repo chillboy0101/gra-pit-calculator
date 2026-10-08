@@ -834,10 +834,17 @@
     clearError();
   }
 
+  function clearAmountsForBasisChange() {
+    if (basicIncomeEl) basicIncomeEl.value = '';
+    if (allowancesEl) allowancesEl.value = '';
+    if (taxReliefEl) taxReliefEl.value = '';
+    if (resultsEl) resultsEl.classList.add('is-hidden');
+  }
+
   if (basisMonthlyEl) {
     basisMonthlyEl.addEventListener('change', function () {
       if (this.checked) {
-        if (resultsEl) resultsEl.classList.add('is-hidden');
+        clearAmountsForBasisChange();
         applyBasis();
       }
     });
@@ -846,7 +853,7 @@
   if (basisAnnualEl) {
     basisAnnualEl.addEventListener('change', function () {
       if (this.checked) {
-        if (resultsEl) resultsEl.classList.add('is-hidden');
+        clearAmountsForBasisChange();
         applyBasis();
       }
     });
