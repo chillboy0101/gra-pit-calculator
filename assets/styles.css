@@ -253,6 +253,8 @@
   color:#fff;
 }
 
+#gra-pit-calculator .gra-btn-primary:hover{background:var(--gra-navy);}
+
 #gra-pit-calculator .gra-btn-secondary{
   border-radius:3px;
   border:1px solid #cbd5e1;

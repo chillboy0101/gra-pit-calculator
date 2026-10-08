@@ -3,7 +3,7 @@
  * Plugin Name: GRA PIT Calculator
  * Plugin URI: https://github.com/chillboy0101/gra-pit-calculator
  * Description: Personal Income Tax calculator for the Ghana Revenue Authority website. Uses the Year of Assessment 2026 resident individual bands and deducts employee SSNIT.
- * Version: 1.0.5
+ * Version: 1.0.6
  * Author: GRA IT Department
  * Author URI: https://gra.gov.gh
  * License: GPL v2 or later
@@ -22,7 +22,7 @@ require_once __DIR__ . '/includes/class-github-updater.php';
 
 class GRA_PIT_Calculator {
 
-    const VERSION = '1.0.5';
+    const VERSION = '1.0.6';
     const SHORTCODE = 'pit_calculator';
 
     public function __construct() {
