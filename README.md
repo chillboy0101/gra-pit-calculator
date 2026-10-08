@@ -85,11 +85,11 @@ Before you publish a release, open the zip and confirm it contains `gra-pit-calc
 
 ## Publish a new version
 
-1. Change both `Version:` and `const VERSION` in `gra-pit-calculator.php` to the same new number, such as `1.0.9`.
+1. Change both `Version:` and `const VERSION` in `gra-pit-calculator.php` to the same new number, such as `1.0.10`.
 2. Copy the preview `app.js` and `styles.css` into `assets/` after editing them.
 3. From this folder, run `bash build-zip.sh`. It writes `dist/gra-pit-calculator.zip` and refuses to include `.git`.
 4. Commit the version change and push it to `main`.
-5. Create a GitHub release. The tag must be `v` plus the version, for example `v1.0.9`.
+5. Create a GitHub release. The tag must be `v` plus the version, for example `v1.0.10`.
 6. Attach the zip. Its file name must stay `gra-pit-calculator.zip`.
 7. On a site that has the plugin, open Plugins and use Check again if the update is not listed yet. The check is cached for 30 minutes.
 

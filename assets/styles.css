@@ -269,8 +269,15 @@
   font-size:16px;
 }
 
-#gra-pit-calculator .gra-btn-secondary:hover,
+#gra-pit-calculator .gra-btn-secondary:focus,
 #gra-pit-calculator .gra-btn-secondary:focus-visible{
+  outline:none;
+  background:#f3f4f6;
+  border-color:#cbd5e1;
+  color:#111827;
+}
+
+#gra-pit-calculator .gra-btn-secondary:hover{
   background:#d9e4f2;
   border-color:var(--gra-navy);
   color:var(--gra-navy);
